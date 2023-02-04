@@ -140,7 +140,7 @@
 <br>
 
 
-## 7 What is the difference between null and undefined in JavaScript?
+## 7. What is the difference between null and undefined in JavaScript?
 ### In JavaScript, null and undefined are both values that indicate the absence of a value or object, but they have different meanings.
 
 ### undefined is the default value assigned to variables that have been declared but have not been assigned a value. It means that the variable has been declared but has no value assigned to it.
@@ -218,4 +218,448 @@
 <br>
 
 
-## 10.
+## 10.What is the use of "this" keyword in JavaScript?
+
+### In JavaScript, the this keyword refers to the object that the currently executing code is associated with. The value of this can change depending on the context in which it is used, and it is often used to access properties and methods of the current object.
+
+### The value of this can be determined in four ways:
+
+### Global context: In the global context, this refers to the global object (window in a web browser).
+
+### Object method: When a function is called as a method of an object, this refers to the object that the method is associated with.
+
+### Constructor: When a function is used with the new operator, this refers to the newly created object.
+
+### Explicit binding: The value of this can also be explicitly set using methods such as call, apply, and bind.
+
+**Here's an example to illustrate the use of this:**
+
+`let person = {`
+ ` firstName: 'John',`
+  `lastName: 'Doe',`
+  `fullName: function() {`
+   ` return this.firstName + ' ' + this.lastName;`
+  `}`
+`};`
+`console.log(person.fullName()); // Output: John Doe`
+
+### In this example, the fullName method is a method of the person object, so when it is called, this refers to the person object and can be used to access its properties, firstName and lastName.
+
+### In conclusion, this is an important and widely used keyword in JavaScript that provides a dynamic and flexible way to reference objects and their properties and methods.
+
+
+<br>
+
+---
+
+<br>
+
+
+## 11. What is the difference between synchronous and asynchronous code in JavaScript?
+### In JavaScript, code can be executed either synchronously or asynchronously.
+
+### ynchronous code is executed in a blocking manner, meaning that the code will block further execution until it has completed. This can lead to delays and freezes in the user interface if the synchronous code takes a long time to execute.
+
+### Asynchronous code, on the other hand, is executed in a non-blocking manner, meaning that the code can run in the background without stopping further execution. This allows other code to continue executing while the asynchronous code is running, which can improve the responsiveness and performance of the application.
+
+**Here's an example to illustrate the difference between synchronous and asynchronous code:**
+
+`// Synchronous code`
+`console.log('Starting synchronous code');`
+`for (let i = 0; i < 1000000000; i++) {}`
+`console.log('Ending synchronous code');`
+
+`// Asynchronous code`
+`console.log('Starting asynchronous code');`
+`setTimeout(function() {`
+  `console.log('Ending asynchronous code');`
+`}, 0);`
+
+<br>
+
+### In this example, the synchronous code block will block further execution until it has completed, which may take a long time. The asynchronous code block, on the other hand, is executed using the setTimeout function, which runs the code asynchronously in the background and does not block further execution.
+
+### In conclusion, asynchronous code is an important concept in JavaScript and is often used to improve the performance and responsiveness of applications. It allows long-running or time-consuming tasks to be executed in the background without blocking further execution.
+
+
+<br>
+
+---
+
+<br>
+
+
+## 12. How do you handle errors in JavaScript?
+
+
+
+
+
+<br>
+
+---
+
+<br>
+
+
+## 13. What is a callback function in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+## 14 . What is event bubbling and capturing in JavaScript?
+
+<br>
+
+---
+
+<br>
+
+## 15. What is the difference between method and function in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+
+## 16. What is prototype in JavaScript?
+
+<br>
+
+---
+
+<br>
+
+
+## 17. What is an object in JavaScript?
+
+<br>
+
+---
+
+<br>
+
+
+## 18. What is an array in JavaScript?
+
+<br>
+
+---
+
+<br>
+
+
+## 19. What is JSON and how do you parse it in JavaScript?
+
+<br>
+
+---
+
+<br>
+
+
+## 20. What is a Promise in JavaScript?
+
+<br>
+
+---
+
+<br>
+
+
+
+
+## 21. What is Async/Await in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 22. What is the difference between class and constructor function in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+## 23. What is the difference between apply and call in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+
+
+## 24. What is a spread operator in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+## 25. What is a rest operator in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+## 26. What is destructuring in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+## 26. What is a Map in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+## 27. What is a Set in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+## 28. What is a WeakMap in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+
+## 29. What is a WeakSet in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 30. What is a generator function in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 31. What is a decorator in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 32. What is a higher-order function in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 33. What is a pure function in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 34. What is a module in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 35. What is CommonJS in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 36. What is ECMAScript in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 37. What is ES6 in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 38. What is Babel in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 39. What is Webpack in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 40. What is ReactJS in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 41. What is AngularJS in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 42. What is VueJS in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 43. What is Polymer in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+## 44. What is ElectronJS in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 45. What is npm in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+## 46. What is yarn in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+## 47. What is the event loop in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+## 48. What is a DOM in JavaScript?
+
+
+<br>
+
+---
+
+<br>
+
+
+## 49. What is a BOM in JavaScript?
+
+
+
+<br>
+
+---
+
+<br>

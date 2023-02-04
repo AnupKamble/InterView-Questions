@@ -291,7 +291,42 @@
 
 ## 12. How do you handle errors in JavaScript?
 
+### In JavaScript, errors can be handled using try-catch statements and throwing custom errors.
 
+### A try-catch statement is a way to handle errors that may occur in a block of code. The code to be executed is placed in the try block, and if an error occurs, it is caught and handled in the catch block. Here's an example:
+
+`try {`
+ ` // Code that may throw an error`
+ ` let x = y + 1;`
+`} catch (error) {`
+  `// Handle the error`
+  `console.error(error);`
+`}`
+### In this example, the code in the try block may throw an error if the variable y is not defined. If an error occurs, it is caught and handled in the catch block, where it can be logged or displayed to the user.
+
+### Custom errors can also be thrown using the throw keyword. This allows you to create custom error messages and types that can be caught and handled in the same way as other errors. Here's an example:
+
+
+`function divide(a, b) {`
+ ` if (b === 0) {`
+  `  throw new Error('Cannot divide by zero');`
+ ` }`
+ ` return a / b;`
+`}`
+
+`try {`
+ ` let result = divide(10, 0);`
+ ` console.log(result);`
+`} catch (error) {`
+ ` console.error(error);`
+`}`
+
+
+<br>
+
+### In this example, the divide function throws a custom error if the second argument is 0. The error is caught in the try-catch statement and logged to the console.
+
+### In conclusion, handling errors in JavaScript is an important aspect of writing robust and reliable code. Try-catch statements and throwing custom errors are two common ways to handle errors in JavaScript, and they allow you to handle errors in a way that is meaningful to your application.
 
 
 
@@ -304,6 +339,33 @@
 
 ## 13. What is a callback function in JavaScript?
 
+### A callback function in JavaScript is a function that is passed as an argument to another function and is executed after the first function has completed. Callback functions are commonly used in JavaScript to handle asynchronous operations, such as making HTTP requests or reading/writing to a file system.
+
+### The idea behind a callback function is that the first function calls the second function (the callback) when it has finished its processing. This allows the second function to access the results of the first function, perform additional processing, and return a value or signal completion.
+
+**Here's an example of a callback function in JavaScript:**
+
+`function doSomething(callback) {`
+ ` // Perform some processing`
+  `console.log('Processing complete');`
+
+ ` // Call the callback function`
+ ` callback();`
+`}`
+
+`// Define the callback function`
+`function myCallback() {`
+ ` console.log('Callback function called');`
+`}`
+
+`// Call the doSomething function and pass myCallback as a callback`
+  `doSomething(myCallback);`
+
+  <br>
+
+### In this example, the doSomething function takes a callback function as an argument and performs some processing. After the processing is complete, the doSomething function calls the callback function that was passed as an argument. In this case, the myCallback function is called, and its logic is executed.
+
+### Callbacks are widely used in JavaScript and are a powerful tool for handling asynchronous operations. By allowing functions to be executed after other functions have completed, callbacks allow you to write code that is more organized, efficient, and robu
 
 <br>
 
@@ -322,6 +384,43 @@
 
 ## 15. What is the difference between method and function in JavaScript?
 
+### In JavaScript, the terms "method" and "function" are used to describe different types of functions.
+
+### A method is a function that is attached to an object. It has access to the object's properties and can modify them, if necessary. A method is invoked using the object's reference, followed by the dot operator (.) and the method name.
+
+**Here's an example of a method in JavaScript:**
+
+
+`let person = {`
+ ` name: 'John Doe',`
+`  sayHello: function() {`
+    `console.log(`Hello, my name is ${this.name}.`);`
+ ` }`
+`};`
+
+`person.sayHello();`
+
+<br>
+
+### In this example, the sayHello method is attached to the person object and can be invoked using the person.sayHello() syntax.
+
+### On the other hand, a function is a block of code that can be invoked by its name. Functions can accept parameters, return values, and be used to encapsulate code. Functions can be declared using the function keyword, or as arrow functions (() =>).
+
+**Here's an example of a function in JavaScript:**
+
+`function multiply(a, b) {`
+  `return a * b;`
+`}`
+
+`let result = multiply(10, 20);`
+`console.log(result);`
+
+
+<br>
+
+### In this example, the multiply function is a standalone function that can be invoked by its name, with two parameters passed as arguments.
+
+### In conclusion, the main difference between a method and a function in JavaScript is that a method is attached to an object, whereas a function is a standalone block of code. Both methods and functions can be used to encapsulate code, accept parameters, and return values, but methods have access to the object's properties and can modify them, if necessary.
 
 <br>
 
@@ -332,6 +431,30 @@
 
 
 ## 16. What is prototype in JavaScript?
+
+### In JavaScript, the prototype is a property of functions that allows you to add properties and methods to an object's blueprint. When a new object is created from a constructor function, it inherits all the properties and methods from the prototype.
+
+### The prototype property is automatically created for every function in JavaScript and is used to create an object-oriented inheritance model. This allows you to create new objects based on existing objects, and share common properties and methods between objects.
+
+**Here's an example of using the prototype property in JavaScript:**
+
+`function Person(firstName, lastName) {`
+ `this.firstName = firstName;`
+ ` this.lastName = lastName;`
+`}`
+
+`Person.prototype.sayHello = function() {`
+  `console.log(`Hello, my name is ${this.firstName} ${this.lastName}.`);`
+`};`
+
+`let person = new Person('John', 'Doe');`
+`person.sayHello();`
+
+<br>
+
+### In this example, the Person function is a constructor function that creates new Person objects. The Person.prototype property is used to add the sayHello method to the Person object's blueprint. This method can then be invoked on any Person object that is created using the new operator.
+
+### The prototype property is a powerful feature in JavaScript that allows you to create objects that share common properties and methods, and provides a mechanism for inheritance and code reuse. Understanding the prototype property is essential for writing effective and efficient JavaScript code.
 
 <br>
 
